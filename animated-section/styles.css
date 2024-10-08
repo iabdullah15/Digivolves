@@ -18,17 +18,18 @@ body {
 .blur-container {
     position: relative;
     width: 100%;
-    height: 100vh; 
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    backdrop-filter: blur(30px);
     overflow: hidden;
+    backdrop-filter: blur(30px); /* Applies blur effect to everything behind the container */
+    background-color: rgba(42, 42, 42, .05)
 }
 
 .folder {
-    position: absolute;
-    transition: transform 1s ease-out, opacity 1s ease-out;
+    position: absolute; /* Make images independent of container bounds */
+    transition: transform 1s ease-out, filter 1s ease-out;
 }
 
 .folder img {
@@ -37,14 +38,25 @@ body {
     transition: transform 1s ease-out, filter 1s ease-out;
 }
 
+.center-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10; /* Ensure the text stays above other elements */
+    color: #000; /* Adjust text color as needed */
+    font-size: 2rem; /* Adjust font size as needed */
+    text-align: center;
+  }
+
 .purple {
-    top: 30%;
-    left: 30%;
+    top: 5%;
+    left: 35%;
 }
 
 .yellow {
-    top: 35%;
-    right: 30%;
+    top: 5%;
+    right: 40%;
 }
 
 /* Starting style (initial position) */

@@ -36,3 +36,31 @@ body {
     font-weight: 600;
     padding: 0.7rem 1.3rem; 
 }
+
+#header-text {
+    font-size: 5rem;
+    font-weight: 500;
+}
+
+.header-span {
+    color: gray;
+}
+
+.header-col-two  {
+    margin-left: auto;
+}
+
+.mkt-text-container {
+    width: 90%;
+}
+
+.mkt-text {
+    font-size: 1.2rem;
+}
+
+.learn-more-btn{
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 0.7rem 2rem; 
+}
