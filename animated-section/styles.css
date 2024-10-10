@@ -2,17 +2,17 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    height: 200vh; /* To enable scrolling */
     font-family: Arial, sans-serif;
 }
 
 .scroll-container {
     position: relative;
-    height: 100vh; /* Full viewport height */
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    overflow: visible; /* Changed to allow images to move outside */
+    z-index: 1;
 }
 
 .blur-container {
@@ -22,13 +22,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
-    backdrop-filter: blur(30px); /* Applies blur effect to everything behind the container */
-    background-color: rgba(42, 42, 42, .05)
+    backdrop-filter: blur(30px);
+    background-color: rgba(42, 42, 42, 0.05);
+    z-index: 1;
 }
 
 .folder {
-    position: absolute; /* Make images independent of container bounds */
+    position: absolute;
+    z-index: 10;
     transition: transform 1s ease-out, filter 1s ease-out;
 }
 
@@ -43,15 +44,15 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 10; /* Ensure the text stays above other elements */
-    color: #000; /* Adjust text color as needed */
-    font-size: 2rem; /* Adjust font size as needed */
+    z-index: 15;
+    color: #000;
+    font-size: 2rem;
     text-align: center;
-  }
+}
 
 .purple {
     top: 5%;
-    left: 35%;
+    left: 40%;
 }
 
 .yellow {
@@ -65,10 +66,10 @@ body {
     transform: translate(0, 0) scale(1);
 }
 
-.purple img{
+.purple img {
     transform: translateY(0px) rotate(10deg) scale(1);
 }
 
-.yellow img{
+.yellow img {
     transform: translateY(0px) rotate(-10deg) scale(1);
 }

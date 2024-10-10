@@ -72,3 +72,34 @@
   margin-top: auto;
   margin-top: 4rem;
 }
+
+.header-col-two {
+  margin-left: auto;
+}
+
+.mkt-text-container {
+  width: 90%;
+}
+
+.mkt-text {
+  font-size: 1.2rem;
+}
+
+.learn-more-btn {
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 0.7rem 2rem;
+}
+
+.work-process-container {
+    margin-top: 8rem;
+}
+
+.work-about-us-container {
+    margin-bottom: 10rem;
+}
+
+.work-about-us-container h2 {
+    width: 75%;
+}
