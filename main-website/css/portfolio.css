@@ -3,7 +3,7 @@
 }
 
 .our-portfolio {
-    margin-left: 15%;
+  margin-left: 15%;
 }
 
 .our-portfolio,
@@ -12,18 +12,53 @@
   font-weight: 600;
 }
 
-.portfolio-image img{
-    aspect-ratio: 576 / 401;
-    background-position: 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 1rem;
-    width: 100%;
-    overflow: hidden;
-    margin-bottom: 2rem; /* Adds space between images */
+.portfolio-image img {
+  aspect-ratio: 576 / 401;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 1rem;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 2rem; /* Adds space between images */
 }
 
 .portfolio-column-2 {
-    position: relative; /* Allows it to move independently */
-    top: -100px; /* Initially move it a bit higher */
-  }
+  position: relative; /* Allows it to move independently */
+  top: -100px; /* Initially move it a bit higher */
+}
+
+.company-pitch-container {
+
+}
+
+.pitch-section {
+  background-color: #2a2a2a;
+  color: #fdfdfd;
+  padding-top: 5rem;
+  margin-top: 3rem;
+}
+
+.pitch-heading-container h1 {
+  font-size: 4rem;
+}
+
+.pitch-heading-2 {
+  margin-left: 10%;
+}
+
+.pitch-row {
+  margin-top: 3rem;
+}
+
+.choose-us-heading {
+
+}
+
+.choose-us-heading h3{
+
+}
+
+.pitch-img{
+  background-color: #ecffa0;
+}
