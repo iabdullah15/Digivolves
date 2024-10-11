@@ -1,0 +1,26 @@
+.company-pitch-container {
+  margin-top: 10rem;
+  padding-bottom: 5rem;
+}
+
+.company-pitch-container {
+  position: relative;
+  overflow: hidden; /* Hide the overflow for a smooth loop */
+  width: 100vw; /* Full viewport width */
+  height: auto; /* Adjust to fit the wave height */
+}
+
+.wave-wrapper {
+  display: flex;
+  position: absolute;
+  left: 0;
+  top: 0;
+  /* Width is determined by the number of wave images */
+  width: calc(4 * 100vw); /* Adjust to 4 images */
+}
+
+.wave {
+  /* width: 100vw; Each wave image is 100% of the viewport width
+  height: auto; */
+  display: block;
+}
