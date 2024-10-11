@@ -1,0 +1,29 @@
+.check-out {
+  color: #a3a3a3;
+}
+
+.our-portfolio {
+    margin-left: 15%;
+}
+
+.our-portfolio,
+.check-out {
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+.portfolio-image img{
+    aspect-ratio: 576 / 401;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 1rem;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 2rem; /* Adds space between images */
+}
+
+.portfolio-column-2 {
+    position: relative; /* Allows it to move independently */
+    top: -100px; /* Initially move it a bit higher */
+  }

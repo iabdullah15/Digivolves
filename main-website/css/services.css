@@ -1,0 +1,56 @@
+.our-services,
+.include {
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+.our {
+  color: #a3a3a3;
+}
+
+.include {
+  margin-left: 40%;
+}
+
+.service-container {
+  background-color: rgba(42, 42, 42, 0.05);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 10rem;
+  background-color: #f7f7f7;
+}
+
+.service-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 6rem;
+}
+
+.service-heading h3 {
+  margin: 0; /* Removes default margin from the heading */
+}
+
+.service-img img {
+  max-width: 100px; /* Set an appropriate width for the image */
+  height: auto;
+}
+
+.pill-container .badge {
+  padding: 0.8rem 1rem;
+  border-radius: 30px;
+}
+
+.service-pill-one,
+.service-pill-two {
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+
+.service-pill-one {
+  background-color: #d1def8;
+}
+
+.service-pill-two {
+    background-color: #ecffa0;
+}
