@@ -1,75 +1,80 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
 }
 
 .scroll-container {
-    position: relative;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: visible; /* Changed to allow images to move outside */
-    z-index: 1;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible; /* Changed to allow images to move outside */
+  z-index: 1;
+  width: 80%;
 }
 
 .blur-container {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    backdrop-filter: blur(30px);
-    background-color: rgba(42, 42, 42, 0.05);
-    z-index: 1;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(30px);
+  background-color: rgba(42, 42, 42, 0.05);
+  z-index: 1;
 }
 
 .folder {
-    position: absolute;
-    z-index: 10;
-    transition: transform 1s ease-out, filter 1s ease-out;
+  position: absolute;
+  z-index: 10;
+  transition: transform 1s ease-out, filter 1s ease-out;
 }
 
 .folder img {
-    width: 200px;
-    height: auto;
-    transition: transform 1s ease-out, filter 1s ease-out;
+  width: 200px;
+  height: auto;
+  transition: transform 1s ease-out, filter 1s ease-out;
 }
 
 .center-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 15;
-    color: #000;
-    font-size: 2rem;
-    text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 15;
+  color: #000;
+  font-size: 2rem;
+  text-align: center;
 }
 
 .purple {
-    top: 5%;
-    left: 40%;
+  top: 5%;
+  left: 40%;
 }
 
 .yellow {
-    top: 5%;
-    right: 40%;
+  top: 5%;
+  right: 40%;
 }
 
 /* Starting style (initial position) */
 .folder img {
-    opacity: 1;
-    transform: translate(0, 0) scale(1);
+  opacity: 1;
+  transform: translate(0, 0) scale(1);
 }
 
 .purple img {
-    transform: translateY(0px) rotate(10deg) scale(1);
+  transform: translateY(0px) rotate(10deg) scale(1);
 }
 
 .yellow img {
-    transform: translateY(0px) rotate(-10deg) scale(1);
+  transform: translateY(0px) rotate(-10deg) scale(1);
 }

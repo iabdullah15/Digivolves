@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 #work-process-heading {
   font-size: 2rem;
 }

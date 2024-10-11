@@ -16,16 +16,25 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <script defer src="../animated-section/script.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
 
+    <link rel="stylesheet" href="smooth-scroll/locomotive-scroll.css" />
     <link rel="stylesheet" href="../animated-section/styles.css" />
     <link rel="stylesheet" href="navbar.css" />
     <link rel="stylesheet" href="main-body.css" />
     <link rel="stylesheet" href="services.css" />
+    <link rel="stylesheet" href="portfolio.css" />
 
+    <script defer src="smooth-scroll/locomotive-scroll.min.js"></script>
+    <script defer src="../animated-section/script.js"></script>
+    <script src="smooth-scrolling.js" defer></script>
+    <script src="portfolio-column.js" defer></script>
     <script src="navbar.js"></script>
   </head>
-  <body>
+  <body data-scroll-container>
     <header id="header">
       <div class="container navbar-container">
         <nav class="navbar navbar-expand-lg mt-4">
@@ -84,9 +93,13 @@
           <div class="heading-row row align-items-end">
             <div class="col-lg-7">
               <h1 id="header-text">
-                Design subscription
-                <span class="header-span"> to grow your</span> brand
-                <span class="header-span">&</span> marketing
+                <span class="animate-span"> Design subscription</span>
+                <span class="animate-span"
+                  ><span class="header-span"> to grow your</span> brand</span
+                >
+                <span class="animate-span"
+                  ><span class="header-span">&</span> marketing</span
+                >
               </h1>
             </div>
             <div
@@ -318,6 +331,27 @@
                   </span>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-section">
+        <div class="container">
+          <div class="portfolio-images-row row">
+            <div class="portfolio-heading">
+              <h1 class="check-out">Check out</h1>
+              <h1 class="our-portfolio">Our Portfolio</h1>
+            </div>
+            <div class="col-lg-6 portfolio-image portfolio-column-1">
+              <img src="portfolio-image.jpg" alt="" class="img-fluid" />
+              <img src="portfolio-image.jpg" alt="" class="img-fluid" />
+              <img src="portfolio-image.jpg" alt="" class="img-fluid" />
+            </div>
+            <div class="col-lg-6 portfolio-image portfolio-column-2">
+              <img src="portfolio-image.jpg" alt="" class="img-fluid" />
+              <img src="portfolio-image.jpg" alt="" class="img-fluid" />
+              <img src="portfolio-image.jpg" alt="" class="img-fluid" />
             </div>
           </div>
         </div>
