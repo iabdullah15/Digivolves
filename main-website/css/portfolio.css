@@ -29,13 +29,15 @@
 }
 
 .company-pitch-container {
-
 }
 
 .pitch-section {
   background-color: #2a2a2a;
   color: #fdfdfd;
   padding-top: 5rem;
+  padding-bottom: 8rem;
+  padding-left: 8%;
+  padding-right: 8%;
   margin-top: 3rem;
 }
 
@@ -52,13 +54,22 @@
 }
 
 .choose-us-heading {
+}
+
+.choose-us-heading h3 {
+}
+
+.pitch-col {
 
 }
 
-.choose-us-heading h3{
-
-}
-
-.pitch-img{
+.pitch-img {
   background-color: #ecffa0;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  position: relative;
+  border-radius: 6px;
 }
