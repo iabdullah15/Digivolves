@@ -80,39 +80,39 @@ body {
 }
 
 
-/* Responsive adjustments for smaller viewports */
+/* Responsive adjustments */
 @media (max-width: 1024px) {
   .purple {
-    left: 30%;
+    left: 20%;
   }
-
   .yellow {
-    right: 30%;
+    right: 25%;
   }
-
   .folder img {
-    width: 150px;
-    height: auto;
-    transition: transform 1s ease-out, filter 1s ease-out;
+    width: 180px;
   }
 }
 
 @media (max-width: 768px) {
   .purple {
-    left: 20%;
+    left: 30%;
   }
-
   .yellow {
-    right: 20%;
+    right: 30%;
+  }
+  .folder img {
+    width: 150px;
   }
 }
 
 @media (max-width: 576px) {
   .purple {
-    left: 10%;
+    left: 35%;
   }
-
   .yellow {
-    right: 10%;
+    right: 35%;
+  }
+  .folder img {
+    width: 120px;
   }
 }
