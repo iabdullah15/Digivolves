@@ -38,6 +38,19 @@
 
 .wave {
   width: 50%; /* Each wave occupies 50% of the container */
-  /* height: 100%; */
   object-fit: cover; /* Maintain aspect ratio */
+  height: 6rem;
+}
+
+#wave-2 {
+  position: relative;
+  left: -5px;
+}
+
+.inverse-wave-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  transform: rotate(180deg); /* Flip the waves upside down */
+
 }
