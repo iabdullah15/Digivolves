@@ -10,17 +10,34 @@
   height: auto; /* Adjust to fit the wave height */
 }
 
-.wave-wrapper {
+/* .wave-wrapper {
   display: flex;
   position: absolute;
   left: 0;
   top: 0;
-  /* Width is determined by the number of wave images */
-  width: calc(4 * 100vw); /* Adjust to 4 images */
+  width: 200%; 
 }
 
 .wave {
-  /* width: 100vw; Each wave image is 100% of the viewport width
-  height: auto; */
   display: block;
+  padding: 0;
+  margin: 0;
+} */
+
+.wave-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.wave-wrapper {
+  display: flex;
+  width: 200%; /* Twice the width for seamless looping */
+  transform: translate3d(0, 0, 0); /* Starting position */
+}
+
+.wave {
+  width: 50%; /* Each wave occupies 50% of the container */
+  /* height: 100%; */
+  object-fit: cover; /* Maintain aspect ratio */
 }

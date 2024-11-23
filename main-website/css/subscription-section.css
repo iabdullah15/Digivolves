@@ -1,0 +1,31 @@
+.flex-subscription-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center headings on top of each other */
+    position: relative;
+    text-align: left; /* Ensure default left alignment */
+}
+
+.top-heading {
+    font-size: 4.5rem; /* Adjust font size */
+    font-weight: 400;
+    margin: 0;
+    position: relative;
+    left: -10px; /* Slightly move to the left */
+}
+
+.bottom-heading {
+    font-size: 4.5rem; /* Adjust font size */
+    font-weight: 400;
+    color: #000; /* Black for the main text */
+    margin: 0;
+    position: relative;
+    right: -5rem; /* Slightly move to the right */
+    text-align: left; /* Text should remain aligned left */
+}
+
+.bottom-heading span,
+.top-heading span{
+    color: #b0b0b0; /* Light gray for "for you" */
+    font-weight: 400; /* Adjust weight for distinction */
+}
