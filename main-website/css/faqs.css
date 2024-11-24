@@ -1,0 +1,67 @@
+.faqs-container {
+  width: 82%;
+  margin: 0 auto;
+  padding: 5rem 4rem;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.faqs-container h2 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+  color: #333;
+  /* text-align: center; */
+}
+
+.faqs-heading {
+    padding-left: 0.8rem;
+}
+
+.accordion-item {
+  border: none; /* Remove default borders */
+  background-color: #f5f5f5 !important;
+}
+
+.accordion-button {
+  background: none !important; /* Ensure no background */
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333; /* Text color consistent */
+  border: none; /* Remove default border */
+  padding: 15px;
+  text-align: left;
+  outline: none !important; /* Remove outline */
+  box-shadow: none !important; /* Remove box shadow */
+  transition: transform 0.2s ease; /* Smooth transitions for animations */
+}
+
+.accordion-button::after {
+  font-family: "FontAwesome";
+  content: "\f067"; /* "+" icon */
+  font-size: 1.2rem;
+  color: #333;
+  margin-left: auto;
+  transition: transform 0.2s ease;
+}
+
+.accordion-button.collapsed::after {
+  content: "\f068"; /* "-" icon */
+  transform: rotate(180deg); /* Rotate for collapsed state */
+}
+
+.accordion-body {
+  font-size: 0.9rem;
+  color: #555;
+  padding: 15px 20px;
+}
+
+.accordion-hr {
+  margin: 0;
+  border: none;
+  border-top: 2px solid #000;
+  width: 97.4%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}

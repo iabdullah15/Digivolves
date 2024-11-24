@@ -39,7 +39,9 @@
 .wave {
   width: 50%; /* Each wave occupies 50% of the container */
   object-fit: cover; /* Maintain aspect ratio */
-  height: 6rem;
+  /* height: 6rem; */
+  height: 60px;
+  /* width: 2520px; */
 }
 
 #wave-2 {
@@ -53,4 +55,25 @@
   overflow: hidden;
   transform: rotate(180deg); /* Flip the waves upside down */
 
+}
+
+
+.black-hr {
+  background-color: black;
+}
+
+.white-hr {
+  background-color: white;
+}
+
+.dotted-hr-subscription {
+  border: none!important;
+  height: 1px!important;
+  background: #000!important;
+  background: repeating-linear-gradient(90deg,#000,#000 6px,transparent 6px,transparent 12px)!important;
+}
+
+.intro-call-btn {
+  font-weight: 600;
+  font-size: 0.85rem;
 }
