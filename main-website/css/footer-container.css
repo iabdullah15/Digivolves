@@ -1,0 +1,18 @@
+.footer-container {
+  background-color: #2a2a2a;
+  padding-bottom: 5rem;
+}
+
+.footer-headers h2 {
+  color: #fdfdfd;
+}
+
+.footer-headers button {
+  padding: 0.7rem 1.5rem;
+  border-radius: 100px;
+}
+
+.footer-hr {
+    color:  #fdfdfd;;
+    height: 1px;
+}

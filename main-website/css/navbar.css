@@ -6,6 +6,10 @@ body {
     font-style: normal; */
 }
 
+.navbar-container {
+  max-width: 90%;
+}
+
 .navbar-brand {
   font-weight: 800;
   font-size: 30px;
@@ -43,4 +47,13 @@ body {
 
 .header-span {
   color: gray;
+}
+
+.brand-motive-container {
+  margin-bottom: 5rem;
+  max-width: 90%;
+}
+
+.header-col-two {
+  margin-top: 25rem;
 }
