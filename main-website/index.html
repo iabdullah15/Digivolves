@@ -25,7 +25,6 @@
     <!-- <link rel="stylesheet" href="../animated-section/folders.css" /> -->
     <link rel="stylesheet" href="../animated-section/styles.css" />
 
-
     <link rel="stylesheet" href="css/navbar.css" />
     <link rel="stylesheet" href="css/main-body.css" />
     <link rel="stylesheet" href="css/services.css" />
@@ -43,6 +42,8 @@
     <script src="portfolio-column.js" defer></script>
     <script src="navbar.js"></script>
     <script src="gsap-animations/wave.js" defer></script>
+    <script src="gsap-animations/underline.js" defer></script>
+
   </head>
   <body>
     <header id="header">
@@ -168,7 +169,7 @@
         </div>
         <div class="blur-overlay"></div>
       </div>
-      
+
       <div class="work-process-container">
         <div class="container">
           <h1 id="work-process-heading" class="mb-5 text-center">
@@ -703,13 +704,45 @@
         </div>
 
         <div class="container-fluid footer-container">
-          <div class="flex-subscription-container footer-headers">
-            <h2 class="top-heading">Select a subscription</h2>
-            <h2 class="bottom-heading mb-3">that works for you</h2>
-            <button class="btn btn-light">Start right now</button>
-          </div>
+          <div class="footer-inner-container">
+            <div class="flex-subscription-container footer-headers">
+              <h2 class="top-heading">Let us take care of</h2>
+              <h2 class="bottom-heading mb-3">your design needs</h2>
+              <button class="btn btn-light">Start right now</button>
+            </div>
 
-          <hr class="hr footer-hr" />
+            <div class="footer-hr-container">
+              <hr class="hr footer-hr" />
+            </div>
+
+            <div class="row footer-row">
+              <div class="col-lg-6 col-md-6 col-12">
+                <h3 class="footer-brand">Digivolves</h3>
+              </div>
+              <div class="col-lg-6 col-md-6 col-12">
+                <h5>Have any questions? Reach out!</h5>
+                <h5 class="mb-3">We reply fast</h5>
+                <h3>
+                  <a href="mailto:info@digivolves.com"
+                    >info@digivolves.com <span class="underline"></span
+                  ></a>
+                </h3>
+              </div>
+              <div class="col-lg-6 col-md-6 col-12">
+
+              </div>
+              <div class="col-lg-6 col-md-6 col-12">
+
+                <div class="card" style="width: 18rem;">
+                  <div class="card-body">
+                    <img src="img/linkedin.png" alt="LinkedIn Logo" class="mb-3 footer-card-logo" style="display: block;">
+                    <p class="card-text">LinkedIn</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </main>

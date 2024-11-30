@@ -3,6 +3,16 @@
   padding-bottom: 5rem;
 }
 
+.footer-inner-container {
+  max-width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-headers {
+  margin-bottom: 10rem;
+}
+
 .footer-headers h2 {
   color: #fdfdfd;
 }
@@ -12,7 +22,74 @@
   border-radius: 100px;
 }
 
+.footer-hr-container {
+  margin: 3rem 0rem;
+}
+
 .footer-hr {
-    color:  #fdfdfd;;
-    height: 1px;
+  color: #fdfdfd;
+  height: 1px;
+}
+
+.footer-row {
+  color: #fdfdfd;
+}
+
+.footer-brand {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.footer-row h5 {
+  font-size: 1.1rem;
+}
+
+.footer-row h3 {
+  font-size: 1.5rem;
+}
+
+
+.footer-row h3 a {
+  position: relative;
+  color: #fdfdfd;
+  text-decoration: none;
+}
+
+.footer-row h3 a .underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px; /* Thickness of the underline */
+  width: 0%;
+  background-color: #fdfdfd;
+}
+
+
+
+.footer-row h3 a {
+  position: relative;
+  color: #fdfdfd;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.footer-row h3 a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background-color: #fdfdfd;
+  transition: width 0.5s linear;
+}
+
+.footer-row h3 a:hover::after {
+  width: 100%;
+}
+
+
+.footer-card-logo {
+  width: 2rem;
+  height: 2rem;
 }
