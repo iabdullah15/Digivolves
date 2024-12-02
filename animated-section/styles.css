@@ -20,7 +20,6 @@ body {
   color: #000;
   font-size: 2rem;
   text-align: center;
-  /* Remove position relative */
 }
 
 .folder {
@@ -30,7 +29,7 @@ body {
 }
 
 .folder img {
-  width: 250px;
+  width: 250px; /* This will be overridden by JS */
   height: auto;
   transition: transform 1s ease-out, filter 1s ease-out;
 }
@@ -59,39 +58,17 @@ body {
   pointer-events: none;
 }
 
-/* Responsive adjustments */
-@media (max-width: 1024px) {
-  .purple {
-    left: 20%;
-  }
-  .yellow {
-    right: 25%;
-  }
-  .folder img {
-    width: 180px;
-  }
-}
-
+/* Responsive text size */
 @media (max-width: 768px) {
-  .purple {
-    left: 30%;
-  }
-  .yellow {
-    right: 30%;
-  }
-  .folder img {
-    width: 150px;
+  .center-text {
+    font-size: 1.5rem;
+    padding: 0 20px;
   }
 }
 
 @media (max-width: 576px) {
-  .purple {
-    left: 35%;
-  }
-  .yellow {
-    right: 35%;
-  }
-  .folder img {
-    width: 120px;
+  .center-text {
+    font-size: 1.2rem;
+    padding: 0 10px;
   }
 }
