@@ -10,20 +10,6 @@
   height: auto; /* Adjust to fit the wave height */
 }
 
-/* .wave-wrapper {
-  display: flex;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 200%; 
-}
-
-.wave {
-  display: block;
-  padding: 0;
-  margin: 0;
-} */
-
 .wave-container {
   position: relative;
   width: 100%;
@@ -76,4 +62,17 @@
 .intro-call-btn {
   font-weight: 600;
   font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+  .wave {
+    height: 40px; /* Reduce height on tablets and smaller devices */
+    
+  }
+}
+
+@media (max-width: 576px) {
+  .wave {
+    height: 30px; /* Further reduce height on mobile devices */
+  }
 }
