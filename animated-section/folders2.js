@@ -3,29 +3,34 @@
 // const purpleFolder = document.querySelector(".purple");
 // const yellowFolder = document.querySelector(".yellow");
 // const container = document.querySelector(".scroll-container");
-// const totalScrollDistance = 8000;
+// const totalScrollDistance = window.innerHeight * 5; // Adjusted for responsiveness
 
-// // Define y values based on screen width
-// const yValueLarge = 800;
-// const yValueMedium = 750;
-// const yValueSmall = 700;
-
+// // Functions to get dynamic values based on viewport size
 // const getYValue = () => {
-//   if (window.innerWidth < 950) return yValueSmall;
-//   if (window.innerWidth > 950 && window.innerWidth <= 1300) return yValueMedium;
-//   return yValueLarge;
+//   if (window.innerWidth < 576) return window.innerHeight * 1.2;
+//   if (window.innerWidth < 768) return window.innerHeight * 1.5;
+//   if (window.innerWidth < 1024) return window.innerHeight * 1.5;
+//   return window.innerHeight * 1.5;
 // };
-
-// // Define scale values based on screen width
-// const scaleLarge = 0.25;
-// const scaleMedium = 0.15;
-// const scaleSmall = 0.125;
 
 // const getScaleValue = () => {
-//   if (window.innerWidth < 768) return scaleSmall;
-//   if (window.innerWidth >= 768 && window.innerWidth <= 1024) return scaleMedium;
-//   return scaleLarge;
+//   if (window.innerWidth < 576) return 0.1;
+//   if (window.innerWidth < 768) return 0.15;
+//   if (window.innerWidth < 1024) return 0.2;
+//   return 0.25;
 // };
+
+// const getInitialFolderSize = () => {
+//   if (window.innerWidth < 576) return 200;
+//   if (window.innerWidth < 768) return 200;
+//   if (window.innerWidth < 1024) return 200;
+//   return 250;
+// };
+
+// // Set initial folder image sizes
+// document.querySelectorAll(".folder img").forEach((img) => {
+//   img.style.width = getInitialFolderSize() + "px";
+// });
 
 // // GSAP timeline for animation sequence
 // const scrollTimeline = gsap.timeline({
@@ -62,13 +67,13 @@
 // scrollTimeline.to(
 //   purpleFolder,
 //   {
-//     x: -150,
-//     y: 300,
+//     x: () => -window.innerWidth * 0.15,
+//     y: () => window.innerHeight * 0.3,
 //     rotation: 60,
-//     scale: 0.4,
+//     scale: () => getScaleValue() * 1.6,
 //     left: "15%",
 //     ease: "power1.out",
-//     duration: 16,
+//     duration: 1,
 //   },
 //   0
 // );
@@ -76,50 +81,56 @@
 // scrollTimeline.to(
 //   yellowFolder,
 //   {
-//     x: 200,
-//     y: 300,
+//     x: () => window.innerWidth * 0.2,
+//     y: () => window.innerHeight * 0.3,
 //     rotation: -60,
-//     scale: 0.4,
+//     scale: () => getScaleValue() * 1.6,
 //     right: "15%",
 //     ease: "power1.out",
-//     duration: 16,
+//     duration: 1,
 //   },
 //   0
 // );
 
-// // Step 2: Bring images back to centered positions
+// // Step 2: Bring images back to centered positions and move them upwards
 // scrollTimeline.to(
 //   purpleFolder,
 //   {
-//     x: -50,
-//     y: getYValue(),
-//     left: "42%",
+//     x: () => -window.innerWidth * 0.05,
+//     y: () => getYValue() - window.innerHeight * 0.5,
+//     left: "45%",
 //     rotation: 90,
 //     top: "5%",
 //     scale: getScaleValue(),
 //     ease: "power1.out",
-//     duration: 20,
+//     duration: 1,
 //   },
-//   "+=2"
+//   "+=0.2"
 // );
 
 // scrollTimeline.to(
 //   yellowFolder,
 //   {
-//     x: 50,
-//     y: getYValue(),
-//     right: "42%",
+//     x: () => window.innerWidth * 0.05,
+//     y: () => getYValue() - window.innerHeight * 0.5,
+//     right: "45%",
 //     rotation: -90,
 //     top: "5%",
 //     scale: getScaleValue(),
 //     ease: "power1.out",
-//     duration: 20,
+//     duration: 1,
 //   },
 //   "<"
 // );
 
 // // Re-run animation on resize to adjust dynamically
 // window.addEventListener("resize", () => {
+//   // Update folder sizes on resize
+//   document.querySelectorAll(".folder img").forEach((img) => {
+//     img.style.width = getInitialFolderSize() + "px";
+//   });
+
+//   // Refresh ScrollTrigger and animation values
 //   ScrollTrigger.getAll().forEach((t) => t.kill());
 //   scrollTimeline.invalidate().restart();
 // });
@@ -133,15 +144,15 @@ const totalScrollDistance = window.innerHeight * 5; // Adjusted for responsivene
 
 // Functions to get dynamic values based on viewport size
 const getYValue = () => {
-  if (window.innerWidth < 576) return window.innerHeight * 1.2;
-  if (window.innerWidth < 768) return window.innerHeight * 1.5;
-  if (window.innerWidth < 1024) return window.innerHeight * 1.5;
-  return window.innerHeight * 1.5;
+  if (window.innerWidth < 576) return window.innerHeight * 1.23;
+  if (window.innerWidth < 768) return window.innerHeight * 1.45;
+  if (window.innerWidth < 1024) return window.innerHeight * 1.45;
+  return window.innerHeight * 1.45;
 };
 
 const getScaleValue = () => {
-  if (window.innerWidth < 576) return 0.1;
-  if (window.innerWidth < 768) return 0.15;
+  if (window.innerWidth < 576) return 0.2;
+  if (window.innerWidth < 768) return 0.3;
   if (window.innerWidth < 1024) return 0.2;
   return 0.25;
 };
@@ -153,10 +164,80 @@ const getInitialFolderSize = () => {
   return 250;
 };
 
+
+
 // Set initial folder image sizes
 document.querySelectorAll(".folder img").forEach((img) => {
   img.style.width = getInitialFolderSize() + "px";
 });
+
+function calculateFinalPositions() {
+  const gap = 10;
+  
+  const finalWidth = getInitialFolderSize() * getScaleValue();
+  console.log(getInitialFolderSize(), getScaleValue());
+  
+  let yellowRight;
+  let purpleLeft;
+  if (window.innerWidth < 420) {
+    // Add logic here if needed
+    purpleLeft = window.innerWidth / 3 - finalWidth - gap - 80 / 2 + "px";
+    yellowRight = window.innerWidth / 3 - finalWidth - gap - 80  / 2 + "px";
+    console.log(purpleLeft);
+    console.log(yellowRight);
+    console.log(finalWidth);
+    
+    
+  }
+  else if (window.innerWidth < 580) {
+    // Add logic here if needed
+    purpleLeft = window.innerWidth / 2.45 - finalWidth - gap - 50 / 2 + "px";
+    yellowRight = window.innerWidth / 2.45 - finalWidth - gap - 50  / 2 + "px";
+    console.log(purpleLeft);
+    console.log(yellowRight);
+    console.log(finalWidth);
+    
+    
+  } else if (window.innerWidth < 768) {
+    // Add logic here if needed
+    purpleLeft = window.innerWidth / 2.3 - finalWidth - gap / 2 + "px";
+    yellowRight = window.innerWidth / 2.3 - finalWidth - gap / 2 + "px";
+    console.log(purpleLeft);
+    console.log(yellowRight);
+    console.log(finalWidth);
+  } else if (window.innerWidth < 1021) {
+    // Add logic here if needed
+    purpleLeft = window.innerWidth / 2.2 - finalWidth - gap / 2.9 + "px";
+    yellowRight = window.innerWidth / 2.2 - finalWidth - gap / 2.9 + "px";
+    console.log(purpleLeft);
+    console.log(yellowRight);
+    console.log(finalWidth);
+  } else if (window.innerWidth < 1165) {
+    // Add logic here if needed
+    purpleLeft = window.innerWidth / 2.2 - finalWidth - gap / 2 + "px";
+    yellowRight = window.innerWidth / 2.2 - finalWidth - gap / 2 + "px";
+    console.log(purpleLeft);
+    console.log(yellowRight);
+    console.log(finalWidth);
+  } else if (window.innerWidth < 1550) {
+    purpleLeft = window.innerWidth / 2.1 - finalWidth - gap / 2 + "px";
+    yellowRight = window.innerWidth / 2.1 - finalWidth - gap / 2 + "px";
+    console.log(finalWidth, purpleLeft, yellowRight);
+  } else if (window.innerWidth <= 1920) {
+    purpleLeft = window.innerWidth / 2.02 - finalWidth - gap / 2 + "px";
+    yellowRight = window.innerWidth / 2.02 - finalWidth - gap / 2 + "px";
+    console.log(finalWidth, purpleLeft, yellowRight);
+  } else {
+    // Default or fallback case if none of the above conditions apply
+    purpleLeft = window.innerWidth / 2 - finalWidth - gap / 2 + "px";
+    yellowRight = window.innerWidth / 2 - finalWidth - gap / 2 + "px";
+  }
+
+  // Finally, return the positions
+  return { purpleLeft, yellowRight };
+}
+
+
 
 // GSAP timeline for animation sequence
 const scrollTimeline = gsap.timeline({
@@ -218,16 +299,16 @@ scrollTimeline.to(
   0
 );
 
-// Step 2: Bring images back to centered positions and move them upwards
+// Step 2: Bring images back to a centered position, side by side
 scrollTimeline.to(
   purpleFolder,
   {
     x: () => -window.innerWidth * 0.05,
     y: () => getYValue() - window.innerHeight * 0.5,
-    left: "45%",
     rotation: 90,
     top: "5%",
     scale: getScaleValue(),
+    left: () => calculateFinalPositions().purpleLeft,
     ease: "power1.out",
     duration: 1,
   },
@@ -239,10 +320,10 @@ scrollTimeline.to(
   {
     x: () => window.innerWidth * 0.05,
     y: () => getYValue() - window.innerHeight * 0.5,
-    right: "45%",
     rotation: -90,
     top: "5%",
     scale: getScaleValue(),
+    right: () => calculateFinalPositions().yellowRight,
     ease: "power1.out",
     duration: 1,
   },

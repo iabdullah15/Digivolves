@@ -54,3 +54,11 @@ body {
 .header-col-two {
   margin-top: 25rem;
 }
+
+
+@media (max-width: 991px) {
+  .header-col-two {
+    margin-top: 0rem;
+    margin-bottom: 2rem;
+  }
+}

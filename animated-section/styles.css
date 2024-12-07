@@ -72,3 +72,44 @@ body {
     padding: 0 10px;
   }
 }
+
+/* Responsive adjustments */
+@media (max-width: 1345px) {
+  .yellow {
+    right: 52%;
+  }
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .yellow {
+    right: 47%;
+  }
+  .folder img {
+    width: 180px;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  .yellow {
+    right: 40%;
+  }
+  .folder img {
+    width: 150px;
+  }
+}
+
+@media (max-width: 576px) {
+  .purple {
+    left: 35%;
+  }
+  .yellow {
+    right: 40%;
+  }
+  .folder img {
+    width: 120px;
+  }
+}

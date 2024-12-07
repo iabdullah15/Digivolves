@@ -82,9 +82,15 @@
   }
 }
 
+
+
 @media (max-width: 576px) {
   .wave-container {
     height: 40px; /* Smaller container height */
+    display: none;
+  }
+
+  .inverse-wave-container {
     display: none;
   }
 
