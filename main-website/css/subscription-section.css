@@ -80,6 +80,11 @@
 
 
 @media (max-width:665px) {
+
+  .flex-subscription-container {
+    max-width: 100%;
+  }
+
   .top-heading {
     left: 0;
     text-align: left;
@@ -96,6 +101,6 @@
   }
 
   .top-heading, .bottom-heading {
-    font-size: 3.2rem;
+    font-size: 2.8rem;
   }
 }

@@ -73,6 +73,10 @@
     display: none;
   }
 
+  .inverse-wave-container {
+    display: none;
+  }
+
   .wave-wrapper {
     height: 50px;
   }

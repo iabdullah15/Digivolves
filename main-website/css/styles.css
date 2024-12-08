@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+}
+
+.digivolves-brand {
+
+  width: 5rem;
+  height: auto;
+
+}
+.scroll-container {
+  position: relative;
+  height: 95vh;
+  width: 100%;
+  display: flex; /* Enable Flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  overflow: visible;
+}
+
+.center-text {
+  z-index: 3; /* On top */
+  color: #000;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.folder {
+  position: absolute;
+  z-index: 1; /* Behind the overlay */
+  transition: transform 1s ease-out, filter 1s ease-out;
+}
+
+.folder img {
+  width: 250px; /* This will be overridden by JS */
+  height: auto;
+  transition: transform 1s ease-out, filter 1s ease-out;
+}
+
+.purple {
+  top: -7%;
+  left: 20%;
+  transform: translateY(0px) rotate(10deg) scale(1);
+}
+
+.yellow {
+  top: -7%;
+  right: 58%;
+  transform: translateY(0px) rotate(-10deg) scale(1);
+}
+
+.blur-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 95vh;
+  z-index: 2; /* Between the folders and the text */
+  backdrop-filter: blur(30px);
+  background-color: rgba(255, 255, 255, 0);
+  pointer-events: none;
+}
+
+/* Responsive text size */
+@media (max-width: 768px) {
+  .center-text {
+    font-size: 1.5rem;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .center-text {
+    font-size: 1.2rem;
+    padding: 0 10px;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1345px) {
+  .yellow {
+    right: 52%;
+  }
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .yellow {
+    right: 47%;
+  }
+  .folder img {
+    width: 180px;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  .yellow {
+    right: 40%;
+  }
+  .folder img {
+    width: 150px;
+  }
+}
+
+@media (max-width: 576px) {
+  .purple {
+    left: 35%;
+  }
+  .yellow {
+    right: 40%;
+  }
+  .folder img {
+    width: 120px;
+  }
+}

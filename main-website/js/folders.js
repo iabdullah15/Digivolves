@@ -7,7 +7,7 @@ const totalScrollDistance = window.innerHeight * 5; // Adjusted for responsivene
 
 // Functions to get dynamic values based on viewport size
 const getYValue = () => {
-  if (window.innerWidth < 576) return window.innerHeight * 1.23;
+  if (window.innerWidth < 576) return window.innerHeight * 1.28;
   if (window.innerWidth < 768) return window.innerHeight * 1.45;
   if (window.innerWidth < 1024) return window.innerHeight * 1.45;
   return window.innerHeight * 1.45;

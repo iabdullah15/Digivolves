@@ -5,6 +5,12 @@ body {
   font-family: Arial, sans-serif;
 }
 
+.digivolves-brand {
+
+  width: 5rem;
+  height: auto;
+
+}
 .scroll-container {
   position: relative;
   height: 95vh;
