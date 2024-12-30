@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" sizes="32x32" href="img/digivolves-logo.png">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/digivolves-logo.png" />
 
     <title>Digivolves</title>
     <link
@@ -16,6 +20,9 @@
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"></script>
+
+
+
     <link rel="stylesheet" href="css/folders.css" />
 
     <link rel="stylesheet" href="css/navbar.css" />
@@ -28,12 +35,14 @@
     <link rel="stylesheet" href="css/footer-container.css" />
 
     <script defer src="js/folders.js"></script>
-
     <script src="js/portfolio-column.js" defer></script>
     <script src="js/navbar.js"></script>
     <script src="gsap-animations/wave.js" defer></script>
     <script src="gsap-animations/underline.js" defer></script>
     <script src="gsap-animations/footer-cards.js" defer></script>
+    <script src="js/folder-fadein.js"></script>
+    <script src="js/work-proc-animation.js"></script>
+    <script src="js/services-animation.js"></script>
   </head>
   <body>
     <header id="header">
@@ -149,7 +158,10 @@
 
       <div class="work-process-container">
         <div class="container">
-          <h1 id="work-process-heading" class="mb-5 text-center">
+          <h1
+            id="work-process-heading"
+            class="mb-5 text-center"
+            data-aos="fade-down">
             Here's how you get it:
           </h1>
 
