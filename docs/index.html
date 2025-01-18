@@ -35,14 +35,20 @@
     <link rel="stylesheet" href="css/footer-container.css" />
 
     <script defer src="js/folders.js"></script>
-    <script src="js/portfolio-column.js" defer></script>
-    <script src="js/navbar.js"></script>
-    <script src="gsap-animations/wave.js" defer></script>
-    <script src="gsap-animations/underline.js" defer></script>
-    <script src="gsap-animations/footer-cards.js" defer></script>
-    <script src="js/folder-fadein.js"></script>
-    <script src="js/work-proc-animation.js"></script>
-    <script src="js/services-animation.js"></script>
+    <script defer src="js/portfolio-column.js" defer></script>
+    <script defer src="js/navbar.js"></script>
+    <script defer src="gsap-animations/wave.js" defer></script>
+    <script defer src="gsap-animations/underline.js" defer></script>
+    <script defer src="gsap-animations/footer-cards.js" defer></script>
+    <script defer src="js/folder-fadein.js"></script>
+    <script defer src="js/work-proc-animation.js"></script>
+    <script defer src="js/services-animation.js"></script>
+    <script defer src="js/portfolio-section.js"></script>
+    <script defer src="js/company-pitch.js"></script>
+    <script defer src="js/subscription-section.js"></script>
+    <script defer src="js/faqs.js"></script>
+    <script defer src="js/footer.js"></script>
+
   </head>
   <body>
     <header id="header">
@@ -72,7 +78,7 @@
               <!-- Center the ul -->
               <ul class="navbar-nav mx-auto middle-section">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#"
+                  <a class="nav-link" aria-current="page" href="#"
                     >About</a
                   >
                 </li>
@@ -91,12 +97,7 @@
                 <li class="nav-item">
                   <a class="nav-link" href="#">Contact</a>
                 </li>
-                <!-- Button on the right -->
-                <!-- <button class="btn btn-dark btn-lg navbar-btn" type="button">
-                See plans
-              </button> -->
               </ul>
-              <!-- Button on the right -->
               <button class="btn btn-dark btn-lg navbar-btn" type="button">
                 See plans
               </button>
@@ -370,7 +371,7 @@
           </div>
         </div>
         <div class="pitch-section">
-          <div class="container- pitch-col pitch-heading-container px-5">
+          <div class="container-fluid pitch-col pitch-heading-container px-5">
             <h1 class="pitch-heading-1">
               <span class="gray-span">So, </span>why work
             </h1>
@@ -385,7 +386,7 @@
                     <img src="img/thunder-icon.svg" alt="" class="img-fluid" />
                   </div>
                 </div>
-                <hr class="border-2 bg-light" />
+                <hr class="border-2 bg-light pitch-hr" />
                 <div class="pitch-paragraph">
                   <p>
                     Receive your designs ASAP without compromising quality. Our
@@ -403,7 +404,7 @@
                     <img src="img/thunder-icon.svg" alt="" class="img-fluid" />
                   </div>
                 </div>
-                <hr class="border-2 bg-light" />
+                <hr class="border-2 bg-light pitch-hr" />
                 <div class="pitch-paragraph">
                   <p>
                     Say bye-bye to budget uncertainties with our transparent and
@@ -419,7 +420,7 @@
                     <img src="img/thunder-icon.svg" alt="" class="img-fluid" />
                   </div>
                 </div>
-                <hr class="border-2 bg-light" />
+                <hr class="border-2 bg-light pitch-hr" />
                 <div class="pitch-paragraph">
                   <p>
                     Good design is the one that performs well and leaves a
@@ -437,7 +438,7 @@
                     <img src="img/thunder-icon.svg" alt="" class="img-fluid" />
                   </div>
                 </div>
-                <hr class="border-2 bg-light" />
+                <hr class="border-2 bg-light pitch-hr" />
                 <div class="pitch-paragraph">
                   <p>
                     Good design is the one that performs well and leaves a
@@ -454,7 +455,7 @@
                     <img src="img/thunder-icon.svg" alt="" class="img-fluid" />
                   </div>
                 </div>
-                <hr class="border-2 bg-light" />
+                <hr class="border-2 bg-light pitch-hr" />
                 <div class="pitch-paragraph">
                   <p>
                     Good design is the one that performs well and leaves a
@@ -471,7 +472,7 @@
                     <img src="img/thunder-icon.svg" alt="" class="img-fluid" />
                   </div>
                 </div>
-                <hr class="border-2 bg-light" />
+                <hr class="border-2 bg-light pitch-hr" />
                 <div class="pitch-paragraph">
                   <p>
                     Good design is the one that performs well and leaves a
@@ -504,8 +505,8 @@
                   <div class="card standard-card p-4 shadow-sm">
                     <div
                       class="d-flex justify-content-between align-items-center">
-                      <h3>Standard</h3>
-                      <h3>$955/m</h3>
+                      <h3 class="subscription-type">Standard</h3>
+                      <h3 class="subscription-price">$955/m</h3>
                     </div>
                     <hr class="black-hr" />
                     <div class="row">
@@ -544,8 +545,8 @@
                   <div class="card plus-card p-4 shadow-sm">
                     <div
                       class="d-flex justify-content-between align-items-center">
-                      <h3>Plus</h3>
-                      <h3>$1500/m</h3>
+                      <h3 class="subscription-type">Plus</h3>
+                      <h3 class="subscription-price">$955/m</h3>
                     </div>
                     <hr class="white-hr" />
                     <div class="row">
@@ -768,8 +769,8 @@
                 <h3 class="footer-brand">Digivolves</h3>
               </div>
               <div class="col-lg-6 col-md-6 col-12">
-                <h5>Have any questions? Reach out!</h5>
-                <h5 class="mb-3">We reply fast</h5>
+                <h5 class="footer-q">Have any questions? Reach out!</h5>
+                <h5 class="mb-3 footer-r">We reply fast</h5>
                 <h3>
                   <a href="mailto:info@digivolves.com"
                     >info@digivolves.com <span class="underline"></span
@@ -778,7 +779,7 @@
               </div>
               <div class="col-lg-6 col-md-6 col-12"></div>
               <div class="col-lg-6 col-md-6 col-12">
-                <div class="row">
+                <div class="row footer-card-row">
                   <!-- First Column -->
                   <div class="col-lg-4 col-md-6 col-sm-6 col-6">
                     <a
