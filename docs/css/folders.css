@@ -6,10 +6,8 @@ body {
 }
 
 .digivolves-brand {
-
   width: 5rem;
   height: auto;
-
 }
 .scroll-container {
   position: relative;
@@ -19,6 +17,7 @@ body {
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
   overflow: visible;
+  background-color: rgba(42, 42, 42, 0.05);
 }
 
 .center-text {
@@ -86,7 +85,6 @@ body {
   }
 }
 
-
 /* Responsive adjustments */
 @media (max-width: 1024px) {
   .yellow {
@@ -97,9 +95,7 @@ body {
   }
 }
 
-
 @media (max-width: 768px) {
-
   .yellow {
     right: 40%;
   }

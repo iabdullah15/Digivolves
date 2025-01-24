@@ -193,14 +193,14 @@ scrollTimeline.to(
   "<"
 );
 
-// Re-run animation on resize to adjust dynamically
 window.addEventListener("resize", () => {
-  // Update folder sizes on resize
+  // 1. Capture the current progress of the timeline
+  let currentProgress = scrollTimeline.progress();
+
+  // 2. Update folder image widths on resize
   document.querySelectorAll(".folder img").forEach((img) => {
     img.style.width = getInitialFolderSize() + "px";
   });
 
-  // Refresh ScrollTrigger and animation values
-  ScrollTrigger.getAll().forEach((t) => t.kill());
-  scrollTimeline.invalidate().restart();
+  ScrollTrigger.refresh();
 });
