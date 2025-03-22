@@ -88,7 +88,7 @@ body {
 /* Responsive adjustments */
 @media (max-width: 1024px) {
   .yellow {
-    right: 47%;
+    right: 50%;
   }
   .folder img {
     width: 180px;
@@ -103,6 +103,17 @@ body {
     width: 150px;
   }
 }
+
+@media (max-width: 620px) {
+  .purple {
+    left: 11%;
+  }
+  .yellow {
+    right: 40%;
+  }
+}
+
+
 
 @media (max-width: 576px) {
   .purple {
