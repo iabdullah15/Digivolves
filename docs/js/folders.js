@@ -27,8 +27,6 @@ const getInitialFolderSize = () => {
   return 250;
 };
 
-
-
 // Set initial folder image sizes
 document.querySelectorAll(".folder img").forEach((img) => {
   img.style.width = getInitialFolderSize() + "px";
@@ -36,31 +34,26 @@ document.querySelectorAll(".folder img").forEach((img) => {
 
 function calculateFinalPositions() {
   const gap = 10;
-  
+
   const finalWidth = getInitialFolderSize() * getScaleValue();
   console.log(getInitialFolderSize(), getScaleValue());
-  
+
   let yellowRight;
   let purpleLeft;
   if (window.innerWidth < 420) {
     // Add logic here if needed
     purpleLeft = window.innerWidth / 3 - finalWidth - gap - 80 / 2 + "px";
-    yellowRight = window.innerWidth / 3 - finalWidth - gap - 80  / 2 + "px";
+    yellowRight = window.innerWidth / 3 - finalWidth - gap - 80 / 2 + "px";
     console.log(purpleLeft);
     console.log(yellowRight);
     console.log(finalWidth);
-    
-    
-  }
-  else if (window.innerWidth < 580) {
+  } else if (window.innerWidth < 580) {
     // Add logic here if needed
     purpleLeft = window.innerWidth / 2.45 - finalWidth - gap - 50 / 2 + "px";
-    yellowRight = window.innerWidth / 2.45 - finalWidth - gap - 50  / 2 + "px";
+    yellowRight = window.innerWidth / 2.45 - finalWidth - gap - 50 / 2 + "px";
     console.log(purpleLeft);
     console.log(yellowRight);
     console.log(finalWidth);
-    
-    
   } else if (window.innerWidth < 768) {
     // Add logic here if needed
     purpleLeft = window.innerWidth / 2.3 - finalWidth - gap / 2 + "px";
@@ -100,8 +93,6 @@ function calculateFinalPositions() {
   return { purpleLeft, yellowRight };
 }
 
-
-
 // GSAP timeline for animation sequence
 const scrollTimeline = gsap.timeline({
   scrollTrigger: {
@@ -129,7 +120,12 @@ const scrollTimeline = gsap.timeline({
         right: "58%",
         top: "-7%",
       });
+      gsap.set(container, {
+        y: 20, // shift down 80px so there's a visible gap on top
+      });
     },
+    // Shift down 80px when pinned from the bottom (scrolling up)
+    onEnterBack: () => gsap.set(container, { y: 20 }),
   },
 });
 
@@ -162,11 +158,12 @@ scrollTimeline.to(
   0
 );
 
+
 // Step 2: Bring images back to a centered position, side by side
 scrollTimeline.to(
   purpleFolder,
   {
-    x: () => -window.innerWidth * 0.05,
+    x: () => -window.innerWidth * 0.1,
     y: () => getYValue() - window.innerHeight * 0.5,
     rotation: 90,
     top: "5%",
@@ -181,7 +178,7 @@ scrollTimeline.to(
 scrollTimeline.to(
   yellowFolder,
   {
-    x: () => window.innerWidth * 0.05,
+    x: () => window.innerWidth * 0.1,
     y: () => getYValue() - window.innerHeight * 0.5,
     rotation: -90,
     top: "5%",
