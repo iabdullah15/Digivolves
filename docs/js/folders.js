@@ -7,6 +7,7 @@ const totalScrollDistance = window.innerHeight * 5; // Adjusted for responsivene
 
 // Functions to get dynamic values based on viewport size
 const getYValue = () => {
+  if (window.innerWidth < 560) return window.innerHeight * 1.8;
   if (window.innerWidth < 576) return window.innerHeight * 1.28;
   if (window.innerWidth < 768) return window.innerHeight * 1.45;
   if (window.innerWidth < 1024) return window.innerHeight * 1.45;
@@ -42,15 +43,15 @@ function calculateFinalPositions() {
   let purpleLeft;
   if (window.innerWidth < 420) {
     // Add logic here if needed
-    purpleLeft = window.innerWidth / 3 - finalWidth - gap - 80 / 2 + "px";
-    yellowRight = window.innerWidth / 3 - finalWidth - gap - 80 / 2 + "px";
+    purpleLeft = window.innerWidth / 3 - finalWidth - gap  / 2 + "px";
+    yellowRight = window.innerWidth / 3 - finalWidth - gap  / 2 + "px";
     console.log(purpleLeft);
     console.log(yellowRight);
     console.log(finalWidth);
   } else if (window.innerWidth < 580) {
     // Add logic here if needed
-    purpleLeft = window.innerWidth / 2.45 - finalWidth - gap - 50 / 2 + "px";
-    yellowRight = window.innerWidth / 2.45 - finalWidth - gap - 50 / 2 + "px";
+    purpleLeft = window.innerWidth / 2.45 - finalWidth - gap / 2 + "px";
+    yellowRight = window.innerWidth / 2.45 - finalWidth - gap / 2 + "px";
     console.log(purpleLeft);
     console.log(yellowRight);
     console.log(finalWidth);
@@ -58,31 +59,21 @@ function calculateFinalPositions() {
     // Add logic here if needed
     purpleLeft = window.innerWidth / 2.3 - finalWidth - gap / 2 + "px";
     yellowRight = window.innerWidth / 2.3 - finalWidth - gap / 2 + "px";
-    console.log(purpleLeft);
-    console.log(yellowRight);
-    console.log(finalWidth);
   } else if (window.innerWidth < 1021) {
     // Add logic here if needed
     purpleLeft = window.innerWidth / 2.2 - finalWidth - gap / 2.9 + "px";
     yellowRight = window.innerWidth / 2.2 - finalWidth - gap / 2.9 + "px";
-    console.log(purpleLeft);
-    console.log(yellowRight);
-    console.log(finalWidth);
   } else if (window.innerWidth < 1165) {
     // Add logic here if needed
     purpleLeft = window.innerWidth / 2.2 - finalWidth - gap / 2 + "px";
     yellowRight = window.innerWidth / 2.2 - finalWidth - gap / 2 + "px";
-    console.log(purpleLeft);
-    console.log(yellowRight);
-    console.log(finalWidth);
+
   } else if (window.innerWidth < 1550) {
     purpleLeft = window.innerWidth / 2.1 - finalWidth - gap / 2 + "px";
     yellowRight = window.innerWidth / 2.1 - finalWidth - gap / 2 + "px";
-    console.log(finalWidth, purpleLeft, yellowRight);
   } else if (window.innerWidth <= 1920) {
     purpleLeft = window.innerWidth / 2.02 - finalWidth - gap / 2 + "px";
     yellowRight = window.innerWidth / 2.02 - finalWidth - gap / 2 + "px";
-    console.log(finalWidth, purpleLeft, yellowRight);
   } else {
     // Default or fallback case if none of the above conditions apply
     purpleLeft = window.innerWidth / 2 - finalWidth - gap / 2 + "px";
@@ -158,15 +149,26 @@ scrollTimeline.to(
   0
 );
 
+// Define a function to calculate the final Y offset for folders
+const getFinalY = () => {
+  // For viewports below 560px, we push the folders further down
+  if (window.innerWidth < 560) {
+    // e.g., use 1.8 as multiplier so that the net offset is:
+    // 1.8 * window.innerHeight - 0.5 * window.innerHeight = 1.3 * window.innerHeight
+    return window.innerHeight * 1.5 - window.innerHeight * 0.5;
+  }
+  // For viewports 560px and wider, use a constant value (e.g., 1.45 multiplier)
+  return getYValue() - window.innerHeight * 0.5;
+};
 
 // Step 2: Bring images back to a centered position, side by side
 scrollTimeline.to(
   purpleFolder,
   {
     x: () => -window.innerWidth * 0.1,
-    y: () => getYValue() - window.innerHeight * 0.5,
+    y: () => getFinalY(), // Use the responsive final Y value
     rotation: 90,
-    top: "5%",
+    top: "5%",  
     scale: getScaleValue(),
     left: () => calculateFinalPositions().purpleLeft,
     ease: "power1.out",
@@ -179,7 +181,7 @@ scrollTimeline.to(
   yellowFolder,
   {
     x: () => window.innerWidth * 0.1,
-    y: () => getYValue() - window.innerHeight * 0.5,
+    y: () => getFinalY(), // Use the same function for consistency
     rotation: -90,
     top: "5%",
     scale: getScaleValue(),
