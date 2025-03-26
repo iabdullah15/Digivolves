@@ -76,3 +76,12 @@
     margin-bottom: 2rem;
   }
 }
+
+@media(max-width:500px){
+  .our-services, .include {
+    font-size: 3rem;
+  }
+  .include {
+    margin-left: 50%;
+  }
+}

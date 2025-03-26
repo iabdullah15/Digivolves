@@ -1,3 +1,7 @@
+.portfolio-container{
+  width: 80%;
+}
+
 .portfolio-heading{
   margin-bottom: 7rem;
 }
@@ -32,9 +36,6 @@
   top: -100px; /* Initially move it a bit higher */
 }
 
-.company-pitch-container {
-}
-
 .pitch-section {
   background-color: #2a2a2a;
   color: #fdfdfd;
@@ -56,16 +57,6 @@
   margin-top: 3rem;
 }
 
-.choose-us-heading {
-}
-
-.choose-us-heading h3 {
-}
-
-.pitch-col {
-
-}
-
 .pitch-img {
   background-color: #ecffa0;
   justify-content: center;
@@ -77,9 +68,32 @@
   border-radius: 6px;
 }
 
+@media (max-width: 1330px) {
+  .portfolio-container {
+    width: 90%;
+  }
+}
+
+@media(max-width:991px) {
+
+  .portfolio-container {
+    margin-bottom: 2rem;
+  }
+
+  .portfolio-heading {
+    margin-bottom: 4rem;
+  }
+  .portfolio-image {
+    margin-bottom: 0;
+  }
+}
 
 @media(max-width:500px){
   .pitch-heading-container {
     padding: 0;
+  }
+
+  .check-out, .our-portfolio {
+    font-size: 3rem;
   }
 }

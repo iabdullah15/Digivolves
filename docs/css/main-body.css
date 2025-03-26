@@ -141,3 +141,13 @@ html {
     font-size: 1rem;
   }
 }
+
+@media(max-width:500px){
+  .work-about-us-container {
+    margin-bottom: 2rem;
+  }
+
+  .work-about-us-container h2 {
+    font-size: 1.2rem;
+  }
+}
