@@ -41,8 +41,6 @@
   color: #fdfdfd;
   padding-top: 5rem;
   padding-bottom: 8rem;
-  padding-left: 8%;
-  padding-right: 8%;
 }
 
 .pitch-heading-container h1 {
@@ -94,6 +92,10 @@
   }
 
   .check-out, .our-portfolio {
+    font-size: 3rem;
+  }
+
+  .pitch-heading-container h1 {
     font-size: 3rem;
   }
 }

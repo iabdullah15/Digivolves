@@ -77,6 +77,10 @@
   display: block;
 }
 
+.footer-card-col {
+  margin-left: 0;
+}
+
 /* Card styles */
 .footer-card {
   border: 1px solid #ddd;
@@ -135,4 +139,11 @@
 /* Hover Rotation */
 .animated-card-link:hover .rotating-background {
   transform: rotate(90deg);
+}
+
+
+@media (max-width:991px){
+  .footer-card-col {
+    margin-bottom: 1rem;
+  }
 }
