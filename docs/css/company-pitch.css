@@ -6,7 +6,7 @@
 .company-pitch-container {
   position: relative;
   overflow: hidden; /* Hide the overflow for a smooth loop */
-  width: 100vw; /* Full viewport width */
+  width: 100%; /* Full viewport width */
   height: auto; /* Adjust to fit the wave height */
 }
 
