@@ -1,3 +1,7 @@
+.services-container {
+  width: 80%;
+}
+
 .our-services,
 .include {
   font-size: 4rem;
@@ -58,4 +62,26 @@
 
 .service-pill-two {
     background-color: #ecffa0;
+}
+
+
+@media (max-width: 1330px) {
+  .services-container {
+    width: 90%;
+  }
+}
+
+@media(max-width:991px){
+  .service-container {
+    margin-bottom: 2rem;
+  }
+}
+
+@media(max-width:500px){
+  .our-services, .include {
+    font-size: 3rem;
+  }
+  .include {
+    margin-left: 50%;
+  }
 }

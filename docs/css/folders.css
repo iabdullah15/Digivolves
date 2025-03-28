@@ -6,19 +6,26 @@ body {
 }
 
 .digivolves-brand {
-
   width: 5rem;
   height: auto;
-
 }
+.pinned-container-wrapper {
+  /* This creates the gap above the pinned container */
+  padding-top: 80px; /* or whatever gap you want */
+}
+
 .scroll-container {
   position: relative;
-  height: 95vh;
-  width: 100%;
+  /* height: 95vh;  */
+  height: calc(100vh - 50px);
+  /* width: 100%; */
+  max-width: 90%;
+  border-radius: 2rem;
   display: flex; /* Enable Flexbox */
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
   overflow: visible;
+  background-color: rgba(42, 42, 42, 0.05);
 }
 
 .center-text {
@@ -62,6 +69,7 @@ body {
   backdrop-filter: blur(30px);
   background-color: rgba(255, 255, 255, 0);
   pointer-events: none;
+  border-radius: 3rem;
 }
 
 /* Responsive text size */
@@ -86,34 +94,45 @@ body {
   }
 }
 
-
 /* Responsive adjustments */
 @media (max-width: 1024px) {
   .yellow {
-    right: 47%;
+    right: 50%;
   }
   .folder img {
     width: 180px;
   }
 }
 
-
 @media (max-width: 768px) {
-
   .yellow {
     right: 40%;
+  }
+  .purple{
+    left: 15%;
   }
   .folder img {
     width: 150px;
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 620px) {
   .purple {
-    left: 35%;
+    left: 11%;
   }
   .yellow {
     right: 40%;
+  }
+}
+
+
+
+@media (max-width: 576px) {
+  /* .purple {
+    left: 10%;
+  } */
+  .yellow {
+    right: 35%;
   }
   .folder img {
     width: 120px;
