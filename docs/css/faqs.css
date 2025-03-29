@@ -1,5 +1,5 @@
 .faqs-container {
-  width: 84%;
+  width: 95%;
   margin: 0 auto;
   margin-bottom: 5rem;
   padding: 5rem 4rem;
@@ -9,16 +9,16 @@
   opacity: 1;
 }
 
-.faqs-container h2 {
+.faqs-heading,
+.accordion-header {
   font-size: 4rem;
   margin-bottom: 8px;
   color: #333;
 }
 
 .faqs-heading {
-    padding-left: 0.8rem;
+  padding-left: 0.8rem;
 }
-
 
 .accordion-item {
   border: none; /* Remove default borders */
@@ -54,4 +54,32 @@
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media (max-width: 1500px) {
+  .faqs-container {
+    width: 93%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .faqs-container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 665px) {
+  .faqs-container {
+    padding: 2rem 1rem;
+  }
+
+  .accordion-header button {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 479px) {
+  .accordion-header button {
+    font-size: 1.125rem;
+  }
 }
