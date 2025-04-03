@@ -1,3 +1,4 @@
+/* folders.css */
 body {
   margin: 0;
   padding: 0;
@@ -9,27 +10,27 @@ body {
   width: 5rem;
   height: auto;
 }
+
+/* Wrapper for pinned container (provides top gap) */
 .pinned-container-wrapper {
-  /* This creates the gap above the pinned container */
-  padding-top: 80px; /* or whatever gap you want */
+  padding-top: 80px;
 }
 
 .scroll-container {
   position: relative;
-  /* height: 95vh;  */
   height: calc(100vh - 50px);
-  /* width: 100%; */
   max-width: 90%;
   border-radius: 2rem;
-  display: flex; /* Enable Flexbox */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: visible;
   background-color: rgba(42, 42, 42, 0.05);
+  margin: 0 auto;
 }
 
 .center-text {
-  z-index: 3; /* On top */
+  z-index: 3;
   color: #000;
   font-size: 2rem;
   text-align: center;
@@ -37,16 +38,18 @@ body {
 
 .folder {
   position: absolute;
-  z-index: 1; /* Behind the overlay */
+  z-index: 1;
   transition: transform 1s ease-out, filter 1s ease-out;
 }
 
 .folder img {
-  width: 250px; /* This will be overridden by JS */
+  width: 250px; /* Overridden by JS */
   height: auto;
   transition: transform 1s ease-out, filter 1s ease-out;
 }
 
+/* The initial positions in the CSS are now only a fallback.
+   GSAP will set pixel values onEnter. */
 .purple {
   top: -7%;
   left: 20%;
@@ -64,8 +67,8 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 95vh;
-  z-index: 2; /* Between the folders and the text */
+  height: calc(100vh - 50px);
+  z-index: 2;
   backdrop-filter: blur(30px);
   background-color: rgba(255, 255, 255, 0);
   pointer-events: none;
@@ -79,7 +82,6 @@ body {
     padding: 0 20px;
   }
 }
-
 @media (max-width: 576px) {
   .center-text {
     font-size: 1.2rem;
@@ -87,54 +89,4 @@ body {
   }
 }
 
-/* Responsive adjustments */
-@media (max-width: 1345px) {
-  .yellow {
-    right: 52%;
-  }
-}
-
-/* Responsive adjustments */
-@media (max-width: 1024px) {
-  .yellow {
-    right: 50%;
-  }
-  .folder img {
-    width: 180px;
-  }
-}
-
-@media (max-width: 768px) {
-  .yellow {
-    right: 40%;
-  }
-  .purple{
-    left: 15%;
-  }
-  .folder img {
-    width: 150px;
-  }
-}
-
-@media (max-width: 620px) {
-  .purple {
-    left: 11%;
-  }
-  .yellow {
-    right: 40%;
-  }
-}
-
-
-
-@media (max-width: 576px) {
-  /* .purple {
-    left: 10%;
-  } */
-  .yellow {
-    right: 35%;
-  }
-  .folder img {
-    width: 120px;
-  }
-}
+/* (Other responsive rules for .purple and .yellow in CSS can be left as fallback) */
