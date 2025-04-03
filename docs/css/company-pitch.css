@@ -19,22 +19,22 @@
 .wave-wrapper {
   display: flex;
   /* width: 200%; Twice the width for seamless looping */
-  width: calc(200% + 1px); /* Slightly extend the wrapper to prevent gaps */
+  width: calc(200%); /* Slightly extend the wrapper to prevent gaps */
 
   transform: translate3d(0, 0, 0); /* Starting position */
 }
 
 .wave {
+  display: block; 
+
   width: 50%; /* Each wave occupies 50% of the container */
-  object-fit: cover; /* Maintain aspect ratio */
-  /* height: 6rem; */
-  height: 60px;
-  /* width: 2520px; */
+  /* object-fit: cover; Maintain aspect ratio */
+  height: auto;
 }
 
 #wave-2 {
   position: relative;
-  left: px;
+  left: -1.9px;
 }
 
 .inverse-wave-container {
