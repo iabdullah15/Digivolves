@@ -10,26 +10,29 @@
   height: auto; /* Adjust to fit the wave height */
 }
 
+/* Outer wave container */
 .wave-container {
   position: relative;
   width: 100%;
-  overflow: hidden;
+  overflow: hidden;   /* Hide horizontally overflowing wave */
 }
 
+/* The flex wrapper that holds the two SVGs side by side */
 .wave-wrapper {
   display: flex;
-  /* width: 200%; Twice the width for seamless looping */
-  width: calc(200%); /* Slightly extend the wrapper to prevent gaps */
-
-  transform: translate3d(0, 0, 0); /* Starting position */
+  width: 200%;         /* Two copies of the wave, each 100% wide */
+  transform: translate3d(0, 0, 0); /* Improves performance on some devices */
+  margin: 0;
+  padding: 0;
 }
 
+/* The wave images themselves */
 .wave {
-  display: block; 
-
-  width: 50%; /* Each wave occupies 50% of the container */
-  /* object-fit: cover; Maintain aspect ratio */
+  display: block;      /* Remove any inline spacing gaps */
+  width: 100%;         /* Responsive: Each wave is full container width */
   height: auto;
+  margin: 0;
+  padding: 0;
 }
 
 #wave-2 {
