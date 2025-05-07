@@ -1,14 +1,50 @@
 <html>
   <head>
-    <title>
-      Minimalist Design Agency | Branding, Logos & Visual Storytelling
-    </title>
+    <link
+      href="images/digivolves-logo.png"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <title>Works - 3D & Blender</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <meta
       name="description"
-      content="Sleek, impactful design for brands: logos, email templates, brochures, and Figma prototypes that communicate boldly."
+      content="We build scalable websites, mobile apps, and software solutions engineered for performance and seamless user experiences."
     />
-    <title>Works - Website Re-Design</title>
     <style>
+      /* container padding / spacing */
+      .image-grid-container {
+        padding: 72px; /* match your site’s horizontal padding */
+        margin: 0 auto;
+      }
+
+      /* grid: 3 columns, auto rows, gap between items */
+      .image-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px; /* adjust spacing to taste */
+      }
+
+      /* force same aspect-ratio & cover */
+      .image-grid img {
+        width: 100%;
+        aspect-ratio: 4 / 3; /* or any ratio you like */
+        object-fit: cover;
+        display: block;
+        border-radius: 1rem;
+      }
+
+      @media (max-width: 768px) {
+        .image-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 480px) {
+        .image-grid {
+          grid-template-columns: 1fr;
+        }
+      }
       .style-0 {
         cursor: auto;
         background-color: rgb(5, 5, 5);
@@ -97,11 +133,6 @@
 
       .style-7 {
         max-width: 940px;
-        transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg)
-          rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-        transform-style: preserve-3d;
-        transform: matrix(1, 0, 0, 1, 0, 0);
-        transform-style: preserve-3d;
         color: rgb(245, 245, 245);
         text-transform: uppercase;
         padding: 0px 26.88px;
@@ -123,11 +154,6 @@
 
       .style-8 {
         max-width: 940px;
-        transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg)
-          rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-        transform-style: preserve-3d;
-        transform: matrix(1, 0, 0, 1, 0, 0);
-        transform-style: preserve-3d;
         position: absolute;
         top: 27.6406px;
         color: rgb(245, 245, 245);
@@ -158,11 +184,6 @@
 
       .style-10 {
         max-width: 940px;
-        transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg)
-          rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-        transform-style: preserve-3d;
-        transform: matrix(1, 0, 0, 1, 0, 0);
-        transform-style: preserve-3d;
         color: rgb(245, 245, 245);
         text-transform: uppercase;
         padding: 0px 26.88px;
@@ -184,11 +205,6 @@
 
       .style-11 {
         max-width: 940px;
-        transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg)
-          rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-        transform-style: preserve-3d;
-        transform: matrix(1, 0, 0, 1, 0, 0);
-        transform-style: preserve-3d;
         position: absolute;
         top: 27.6406px;
         color: rgb(245, 245, 245);
@@ -300,6 +316,7 @@
         background-color: rgba(0, 0, 0, 0);
       }
 
+      /* Make hidden elements visible */
       .style-17 {
         -webkit-user-select: text;
         float: right;
@@ -308,7 +325,7 @@
         user-select: text;
         padding: 18px;
         font-size: 24px;
-        display: none;
+        display: block;
         position: relative;
         box-sizing: border-box;
       }
@@ -327,7 +344,7 @@
 
       .style-19 {
         width: 100%;
-        display: none;
+        display: block;
         position: absolute;
         top: 100%;
         left: 0px;
@@ -443,13 +460,9 @@
         box-sizing: border-box;
       }
 
+      /* Change opacity from 0 to 1 for visibility */
       .style-31 {
         opacity: 1;
-        transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
-          rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-        transform-style: preserve-3d;
-        transform: matrix(1, 0, 0, 1, 0, 0);
-        transform-style: preserve-3d;
         border-radius: 24px;
         min-height: 720px;
         max-height: 720px;
@@ -457,7 +470,6 @@
         margin-right: auto;
         position: relative;
         overflow: hidden;
-        box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 5px 0px;
         box-sizing: border-box;
       }
 
@@ -523,17 +535,12 @@
         box-sizing: border-box;
       }
 
+      /* Change opacity from 0 to 1 for visibility */
       .style-38 {
         opacity: 1;
-        transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
-          rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-        transform-style: preserve-3d;
-        transform: matrix(1, 0, 0, 1, 0, 0);
-        transform-style: preserve-3d;
         gap: 21.312px;
         flex-direction: column;
         display: flex;
-        box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 5px 0px;
         box-sizing: border-box;
       }
 
@@ -590,16 +597,6 @@
       }
 
       .style-44 {
-        letter-spacing: 1.344px;
-        margin-bottom: 0px;
-        font-size: 21.312px;
-        font-weight: 300;
-        line-height: 36.288px;
-        margin-top: 0px;
-        box-sizing: border-box;
-      }
-
-      .style-45 {
         letter-spacing: -1.344px;
         text-transform: capitalize;
         margin-top: 0px;
@@ -610,7 +607,7 @@
         box-sizing: border-box;
       }
 
-      .style-46 {
+      .style-45 {
         letter-spacing: 1.344px;
         margin-bottom: 0px;
         font-size: 21.312px;
@@ -620,7 +617,7 @@
         box-sizing: border-box;
       }
 
-      .style-47 {
+      .style-46 {
         gap: 21.312px;
         flex-flow: column nowrap;
         margin-top: 0px;
@@ -628,6 +625,14 @@
         padding-left: 53.76px;
         display: flex;
         overflow: hidden;
+        box-sizing: border-box;
+      }
+
+      .style-47 {
+        letter-spacing: 1.344px;
+        font-size: 21.312px;
+        font-weight: 300;
+        line-height: 36.288px;
         box-sizing: border-box;
       }
 
@@ -664,50 +669,12 @@
       }
 
       .style-52 {
-        letter-spacing: 1.344px;
-        font-size: 21.312px;
-        font-weight: 300;
-        line-height: 36.288px;
-        box-sizing: border-box;
-      }
-
-      .style-53 {
-        letter-spacing: 1.344px;
-        margin-bottom: 0px;
-        font-size: 21.312px;
-        font-weight: 300;
-        line-height: 36.288px;
-        margin-top: 0px;
-        box-sizing: border-box;
-      }
-
-      .style-54 {
-        letter-spacing: 1.344px;
-        margin-bottom: 0px;
-        font-size: 21.312px;
-        font-weight: 300;
-        line-height: 36.288px;
-        margin-top: 0px;
-        box-sizing: border-box;
-      }
-
-      .style-55 {
-        letter-spacing: 1.344px;
-        margin-bottom: 0px;
-        font-size: 21.312px;
-        font-weight: 300;
-        line-height: 36.288px;
-        margin-top: 0px;
-        box-sizing: border-box;
-      }
-
-      .style-56 {
         width: 100%;
         box-sizing: border-box;
         display: block;
       }
 
-      .style-57 {
+      .style-53 {
         padding-left: 72px;
         padding-right: 72px;
         width: 100%;
@@ -719,19 +686,19 @@
         box-sizing: border-box;
       }
 
-      .style-58 {
+      .style-54 {
         min-height: 84.48px;
         box-sizing: border-box;
       }
 
-      .style-59 {
+      .style-55 {
         width: 100%;
         background-color: rgb(5, 5, 5);
         box-sizing: border-box;
         display: block;
       }
 
-      .style-60 {
+      .style-56 {
         padding-left: 144px;
         padding-right: 144px;
         width: 100%;
@@ -743,18 +710,14 @@
         box-sizing: border-box;
       }
 
-      .style-61 {
+      .style-57 {
         min-height: 42.24px;
         box-sizing: border-box;
       }
 
-      .style-62 {
+      /* The social/navigation container uses flex – ensure opacity is set to 1 */
+      .style-58 {
         opacity: 1;
-        transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
-          rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-        transform-style: preserve-3d;
-        transform: matrix(1, 0, 0, 1, 0, 0);
-        transform-style: preserve-3d;
         justify-content: space-between;
         align-items: flex-start;
         width: 100%;
@@ -767,7 +730,7 @@
         box-sizing: border-box;
       }
 
-      .style-63 {
+      .style-59 {
         gap: 38.4px;
         flex-flow: column nowrap;
         align-items: flex-start;
@@ -775,7 +738,7 @@
         box-sizing: border-box;
       }
 
-      .style-64 {
+      .style-60 {
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -791,7 +754,7 @@
         background-color: rgba(0, 0, 0, 0);
       }
 
-      .style-65 {
+      .style-61 {
         object-fit: cover;
         object-position: 50% 50%;
         min-height: 32.064px;
@@ -804,7 +767,7 @@
         border: 0px none rgb(51, 51, 51);
       }
 
-      .style-66 {
+      .style-62 {
         z-index: 1;
         gap: 21.12px;
         justify-content: center;
@@ -813,69 +776,69 @@
         box-sizing: border-box;
       }
 
+      .style-63 {
+        color: rgb(245, 245, 245);
+        letter-spacing: 1.344px;
+        font-size: 21.12px;
+        line-height: 27.648px;
+        text-decoration: none solid rgb(245, 245, 245);
+        max-width: 100%;
+        display: block;
+        box-sizing: border-box;
+        background-color: rgba(0, 0, 0, 0);
+      }
+
+      .style-64 {
+        background-image: radial-gradient(
+          circle closest-side at 50% 50%,
+          rgb(245, 245, 245) 80%,
+          rgb(5, 5, 5) 90%
+        );
+        filter: invert(1);
+        min-width: 21.12px;
+        max-width: 21.12px;
+        min-height: 21.12px;
+        max-height: 21.12px;
+        object-fit: cover;
+        border-radius: 100%;
+        display: inline-block;
+        vertical-align: middle;
+        box-sizing: border-box;
+        border: 0px none rgb(245, 245, 245);
+      }
+
+      .style-65 {
+        color: rgb(245, 245, 245);
+        letter-spacing: 1.344px;
+        font-size: 21.12px;
+        line-height: 27.648px;
+        text-decoration: none solid rgb(245, 245, 245);
+        max-width: 100%;
+        display: block;
+        box-sizing: border-box;
+        background-color: rgba(0, 0, 0, 0);
+      }
+
+      .style-66 {
+        background-image: radial-gradient(
+          circle closest-side at 50% 50%,
+          rgb(245, 245, 245) 80%,
+          rgb(5, 5, 5) 90%
+        );
+        filter: invert(1);
+        min-width: 21.12px;
+        max-width: 21.12px;
+        min-height: 21.12px;
+        max-height: 21.12px;
+        object-fit: cover;
+        border-radius: 100%;
+        display: inline-block;
+        vertical-align: middle;
+        box-sizing: border-box;
+        border: 0px none rgb(245, 245, 245);
+      }
+
       .style-67 {
-        color: rgb(245, 245, 245);
-        letter-spacing: 1.344px;
-        font-size: 21.12px;
-        line-height: 27.648px;
-        text-decoration: none solid rgb(245, 245, 245);
-        max-width: 100%;
-        display: block;
-        box-sizing: border-box;
-        background-color: rgba(0, 0, 0, 0);
-      }
-
-      .style-68 {
-        background-image: radial-gradient(
-          circle closest-side at 50% 50%,
-          rgb(245, 245, 245) 80%,
-          rgb(5, 5, 5) 90%
-        );
-        filter: invert(1);
-        min-width: 21.12px;
-        max-width: 21.12px;
-        min-height: 21.12px;
-        max-height: 21.12px;
-        object-fit: cover;
-        border-radius: 100%;
-        display: inline-block;
-        vertical-align: middle;
-        box-sizing: border-box;
-        border: 0px none rgb(245, 245, 245);
-      }
-
-      .style-69 {
-        color: rgb(245, 245, 245);
-        letter-spacing: 1.344px;
-        font-size: 21.12px;
-        line-height: 27.648px;
-        text-decoration: none solid rgb(245, 245, 245);
-        max-width: 100%;
-        display: block;
-        box-sizing: border-box;
-        background-color: rgba(0, 0, 0, 0);
-      }
-
-      .style-70 {
-        background-image: radial-gradient(
-          circle closest-side at 50% 50%,
-          rgb(245, 245, 245) 80%,
-          rgb(5, 5, 5) 90%
-        );
-        filter: invert(1);
-        min-width: 21.12px;
-        max-width: 21.12px;
-        min-height: 21.12px;
-        max-height: 21.12px;
-        object-fit: cover;
-        border-radius: 100%;
-        display: inline-block;
-        vertical-align: middle;
-        box-sizing: border-box;
-        border: 0px none rgb(245, 245, 245);
-      }
-
-      .style-71 {
         color: rgb(245, 245, 245);
         text-align: left;
         align-self: auto;
@@ -889,7 +852,7 @@
         box-sizing: border-box;
       }
 
-      .style-72 {
+      .style-68 {
         gap: 153.6px;
         justify-content: flex-end;
         align-items: flex-start;
@@ -897,7 +860,7 @@
         box-sizing: border-box;
       }
 
-      .style-73 {
+      .style-69 {
         gap: 32.064px;
         text-align: center;
         flex-direction: column;
@@ -907,7 +870,7 @@
         box-sizing: border-box;
       }
 
-      .style-74 {
+      .style-70 {
         flex-direction: column;
         display: flex;
         position: relative;
@@ -915,12 +878,58 @@
         box-sizing: border-box;
       }
 
-      .style-75 {
+      .style-71 {
         color: rgb(245, 245, 245);
         object-fit: fill;
         font-size: 19.2px;
         line-height: 34.176px;
         position: static;
+        letter-spacing: 1.344px;
+        text-decoration: none solid rgb(245, 245, 245);
+        box-sizing: border-box;
+        background-color: rgba(0, 0, 0, 0);
+      }
+
+      .style-72 {
+        position: absolute;
+        top: 34.1719px;
+        color: rgb(245, 245, 245);
+        object-fit: fill;
+        font-size: 19.2px;
+        line-height: 34.176px;
+        letter-spacing: 1.344px;
+        text-decoration: none solid rgb(245, 245, 245);
+        box-sizing: border-box;
+        background-color: rgba(0, 0, 0, 0);
+      }
+
+      .style-73 {
+        flex-direction: column;
+        display: flex;
+        position: relative;
+        overflow: hidden;
+        box-sizing: border-box;
+      }
+
+      .style-74 {
+        color: rgb(245, 245, 245);
+        object-fit: fill;
+        font-size: 19.2px;
+        line-height: 34.176px;
+        position: static;
+        letter-spacing: 1.344px;
+        text-decoration: none solid rgb(245, 245, 245);
+        box-sizing: border-box;
+        background-color: rgba(0, 0, 0, 0);
+      }
+
+      .style-75 {
+        position: absolute;
+        top: 34.1719px;
+        color: rgb(245, 245, 245);
+        object-fit: fill;
+        font-size: 19.2px;
+        line-height: 34.176px;
         letter-spacing: 1.344px;
         text-decoration: none solid rgb(245, 245, 245);
         box-sizing: border-box;
@@ -928,68 +937,14 @@
       }
 
       .style-76 {
-        position: absolute;
-        top: 34.1719px;
-        color: rgb(245, 245, 245);
-        object-fit: fill;
-        font-size: 19.2px;
-        line-height: 34.176px;
-        letter-spacing: 1.344px;
-        text-decoration: none solid rgb(245, 245, 245);
+        flex-direction: column;
+        display: flex;
+        position: relative;
+        overflow: hidden;
         box-sizing: border-box;
-        background-color: rgba(0, 0, 0, 0);
       }
 
       .style-77 {
-        flex-direction: column;
-        display: flex;
-        position: relative;
-        overflow: hidden;
-        box-sizing: border-box;
-      }
-
-      .style-78 {
-        transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg)
-          rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-        transform-style: preserve-3d;
-        transform-style: preserve-3d;
-        color: rgb(245, 245, 245);
-        object-fit: fill;
-        font-size: 19.2px;
-        line-height: 34.176px;
-        position: static;
-        letter-spacing: 1.344px;
-        text-decoration: none solid rgb(245, 245, 245);
-        box-sizing: border-box;
-        background-color: rgba(0, 0, 0, 0);
-      }
-
-      .style-79 {
-        transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg)
-          rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-        transform-style: preserve-3d;
-        transform-style: preserve-3d;
-        position: absolute;
-        top: 34.1719px;
-        color: rgb(245, 245, 245);
-        object-fit: fill;
-        font-size: 19.2px;
-        line-height: 34.176px;
-        letter-spacing: 1.344px;
-        text-decoration: none solid rgb(245, 245, 245);
-        box-sizing: border-box;
-        background-color: rgba(0, 0, 0, 0);
-      }
-
-      .style-80 {
-        flex-direction: column;
-        display: flex;
-        position: relative;
-        overflow: hidden;
-        box-sizing: border-box;
-      }
-
-      .style-81 {
         position: absolute;
         top: 0px;
         color: rgb(245, 245, 245);
@@ -1002,7 +957,7 @@
         background-color: rgba(0, 0, 0, 0);
       }
 
-      .style-82 {
+      .style-78 {
         gap: 32.064px;
         text-align: center;
         flex-direction: column;
@@ -1012,7 +967,7 @@
         box-sizing: border-box;
       }
 
-      .style-83 {
+      .style-79 {
         flex-direction: column;
         display: flex;
         position: relative;
@@ -1020,7 +975,7 @@
         box-sizing: border-box;
       }
 
-      .style-84 {
+      .style-80 {
         color: rgb(245, 245, 245);
         object-fit: fill;
         font-size: 19.2px;
@@ -1032,7 +987,7 @@
         background-color: rgba(0, 0, 0, 0);
       }
 
-      .style-85 {
+      .style-81 {
         position: absolute;
         top: 34.1719px;
         color: rgb(245, 245, 245);
@@ -1045,13 +1000,9 @@
         background-color: rgba(0, 0, 0, 0);
       }
 
-      .style-86 {
+      /* Change opacity from 0 to 1 for visibility */
+      .style-82 {
         opacity: 1;
-        transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
-          rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-        transform-style: preserve-3d;
-        transform: matrix(1, 0, 0, 1, 0, 0);
-        transform-style: preserve-3d;
         gap: 42.24px;
         background-color: rgb(245, 245, 245);
         text-align: center;
@@ -1064,13 +1015,9 @@
         box-sizing: border-box;
       }
 
-      .style-87 {
+      /* Change opacity from 0 to 1 for visibility */
+      .style-83 {
         opacity: 1;
-        transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
-          rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-        transform-style: preserve-3d;
-        transform: matrix(1, 0, 0, 1, 0, 0);
-        transform-style: preserve-3d;
         text-align: left;
         justify-content: space-between;
         align-items: flex-start;
@@ -1082,8 +1029,8 @@
         box-sizing: border-box;
       }
 
-      .style-88 {
-        color: rgb(245, 245, 245);
+      .style-84 {
+        color: rgb(245, 245, 255);
         text-align: left;
         align-self: auto;
         letter-spacing: 1.344px;
@@ -1095,7 +1042,7 @@
         box-sizing: border-box;
       }
 
-      .style-89 {
+      .style-85 {
         color: rgb(170, 173, 176);
         letter-spacing: normal;
         font-size: 12px;
@@ -1146,9 +1093,8 @@
         transition: all;
       }
 
-      .style-90 {
+      .style-86 {
         margin-right: 4px;
-        width: 26px;
         width: 26px;
         object-fit: cover;
         max-width: none;
@@ -1159,9 +1105,6 @@
         vertical-align: middle;
         box-sizing: content-box;
         height: 16px;
-        max-height: none;
-        min-height: 0px;
-        min-width: 0px;
         padding: 0px;
         float: none;
         clear: none;
@@ -1194,7 +1137,7 @@
         transition: all;
       }
 
-      .style-91 {
+      .style-87 {
         object-fit: cover;
         max-width: none;
         display: inline-block;
@@ -1205,9 +1148,6 @@
         box-sizing: content-box;
         width: unset;
         height: 12px;
-        max-height: none;
-        min-height: 0px;
-        min-width: 0px;
         margin: 0px;
         padding: 0px;
         float: none;
@@ -1240,44 +1180,7 @@
         overflow-wrap: normal;
         transition: all;
       }
-
-      /* container padding / spacing */
-      .image-grid-container {
-        padding: 72px; /* match your site’s horizontal padding */
-        margin: 0 auto;
-      }
-
-      /* grid: 3 columns, auto rows, gap between items */
-      .image-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 24px; /* adjust spacing to taste */
-      }
-
-      /* force same aspect-ratio & cover */
-      .image-grid img {
-        width: 100%;
-        aspect-ratio: 4 / 3; /* or any ratio you like */
-        object-fit: cover;
-        display: block;
-        border-radius: 1rem;
-      }
-      @media (max-width: 768px) {
-        .image-grid {
-          grid-template-columns: repeat(2, 1fr);
-        }
-      }
-      @media (max-width: 480px) {
-        .image-grid {
-          grid-template-columns: 1fr;
-        }
-      }
     </style>
-    <meta property="twitter:image" content="images/digivolves-logo.png" />
-    <meta property="og:type" content="website" />
-    <meta content="summary_large_image" name="twitter:card" />
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <meta content="Webflow" name="generator" />
     <link href="css/normalize.css" rel="stylesheet" type="text/css" />
     <link href="css/webflow.css" rel="stylesheet" type="text/css" />
     <link
@@ -1411,22 +1314,16 @@
         <div class="style-23">
           <div class="style-24">
             <h5 class="style-25">works</h5>
-            <h3 class="style-26">Website Redesign</h3>
+            <h3 class="style-26">Blender Creations</h3>
             <p class="style-27">
-              For ProfitPro, we collaborated closely to design a banking portal
-              that delivers ease of use, security, and reliability to its users.
-              By focusing on intuitive navigation and a sleek, professional
-              design, we ensured that both personal and business banking clients
-              could easily access and manage their finances with confidence. Our
-              design approach centered on delivering a clean, responsive
-              interface that would work seamlessly across desktop and mobile
-              platforms. The final website design incorporated secure login
-              systems, advanced financial tools, and analytics dashboards. We
-              also provided full design deliverables in various formats, along
-              with detailed guidelines for the development team to maintain
-              consistency and usability. The result is a modern, secure, and
-              user-friendly banking portal that enhances ProfitPro’s digital
-              presence in the financial sector.
+              The project involved the complete creation of 3D models and
+              animations for MinimalChat headphones using Blender. This included
+              designing realistic headphone models, developing engaging
+              animations to highlight key features like sound quality and
+              comfort, and producing dynamic ad content for digital platforms.
+              The final result was a series of polished, high-quality assets
+              that elevated the brand's image and captured attention across
+              various marketing channels.
             </p>
           </div>
         </div>
@@ -1440,15 +1337,25 @@
             loading="eager"
             height=""
             alt=""
-            src="https://cdn.prod.website-files.com/67f39716847a7970e1c25fc6/67f7b61ca4b2fa70bb4024d8_22.jpg"
+            src="https://cdn.prod.website-files.com/681909408fa7cc9125907da8/6819120463f2240e8072da38_q1.png"
             sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px"
             srcset="
-              https://cdn.prod.website-files.com/67f39716847a7970e1c25fc6/67f7b61ca4b2fa70bb4024d8_22-p-500.jpg   500w,
-              https://cdn.prod.website-files.com/67f39716847a7970e1c25fc6/67f7b61ca4b2fa70bb4024d8_22-p-800.jpg   800w,
-              https://cdn.prod.website-files.com/67f39716847a7970e1c25fc6/67f7b61ca4b2fa70bb4024d8_22-p-1080.jpg 1080w,
-              https://cdn.prod.website-files.com/67f39716847a7970e1c25fc6/67f7b61ca4b2fa70bb4024d8_22.jpg        1440w
+              https://cdn.prod.website-files.com/681909408fa7cc9125907da8/6819120463f2240e8072da38_q1-p-500.png   500w,
+              https://cdn.prod.website-files.com/681909408fa7cc9125907da8/6819120463f2240e8072da38_q1-p-800.png   800w,
+              https://cdn.prod.website-files.com/681909408fa7cc9125907da8/6819120463f2240e8072da38_q1-p-1080.png 1080w,
+              https://cdn.prod.website-files.com/681909408fa7cc9125907da8/6819120463f2240e8072da38_q1-p-1600.png 1600w,
+              https://cdn.prod.website-files.com/681909408fa7cc9125907da8/6819120463f2240e8072da38_q1-p-2000.png 2000w,
+              https://cdn.prod.website-files.com/681909408fa7cc9125907da8/6819120463f2240e8072da38_q1.png        2337w
             "
-            class="style-32"
+            class="image-parallax-curve"
+            style="
+              will-change: opacity, transform;
+              opacity: 1;
+              transform: translate3d(0px, -5.63567%, 0px)
+                scale3d(1.03315, 1.03315, 1) rotateX(0deg) rotateY(0deg)
+                rotateZ(0deg) skew(0deg, 0deg);
+              transform-style: preserve-3d;
+            "
           />
           <div
             data-w-id="575c569b-04f8-535b-a62d-6ecd1d1e4795"
@@ -1464,66 +1371,88 @@
           <div class="style-38">
             <h2 class="style-39">Project Overview:</h2>
             <p class="style-40">
-              For ProfitPro, we collaborated closely to design a banking portal
-              that delivers ease of use, security, and reliability to its users.
-              The focus was on creating a seamless digital experience tailored
-              to both personal and business banking clients. By combining sleek
-              aesthetics with functional depth, we aimed to enhance ProfitPro’s
-              online banking presence and reinforce trust through thoughtful
-              design.
+              MinimalChat, a premium headphone brand, sought to create visually
+              striking 3D product ads using Blender for their latest collection.
+              The project involved designing realistic, high-quality 3D models
+              of the headphones and crafting engaging animations to highlight
+              their sleek design and advanced features. These assets were then
+              used for advertising campaigns across digital platforms,
+              showcasing the brand’s commitment to both innovation and aesthetic
+              simplicity.
             </p>
             <p class="style-41">‍</p>
             <h3 class="style-42">Objectives:</h3>
             <p class="style-43">
-              Ensure intuitive navigation and a user-friendly experience across
-              desktop and mobile platforms.Create a modern and professional
-              interface that instills confidence in users interacting with
-              financial data.Implement design components that support advanced
-              financial tools, secure login systems, and analytics
-              features.Deliver comprehensive design files and guidelines to
-              support seamless development and consistent implementation.
+              Create high-quality 3D models of MinimalChat headphones to
+              accurately represent the product's sleek and minimalist design.
             </p>
-            <p class="style-44">‍</p>
-            <h3 class="style-45">Scope of Work:</h3>
-            <p class="style-46">
-              Our work for ProfitPro involved the following key areas:
+            <p class="style-43">
+              Develop dynamic animations that highlight key features, such as
+              sound quality, comfort, and design, to engage potential customers.
             </p>
-            <ul role="list" class="style-47">
+
+            <p class="style-43">
+              Produce eye-catching ad content optimized for various platforms,
+              including social media, websites, and digital banners, driving
+              brand awareness and sales.
+            </p>
+
+            <h3 class="style-44">Scope of Work:</h3>
+            <p class="style-45">
+              3D Product Modeling: Crafting realistic 3D models of the
+              headphones, paying attention to materials, textures, and fine
+              details to ensure accuracy.
+            </p>
+
+            <ul role="list" class="style-46">
+              <li class="style-47">
+                Animation: Creating smooth, high-quality animations to showcase
+                the headphones from different angles, emphasizing features like
+                comfort, sound quality, and sleek aesthetics.
+              </li>
               <li class="style-48">
-                In-depth UX research and analysis to understand user behaviors
-                and expectations in the banking sector.
+                Visual Effects and Rendering: Enhancing the visuals with
+                lighting effects, backgrounds, and product-focused animations to
+                create compelling, shareable ad content.
               </li>
               <li class="style-49">
-                Wireframing and prototyping of the banking portal interface for
-                both desktop and mobile experiences.
+                Ad Creation for Multiple Platforms: Tailoring the final product
+                for various digital platforms, ensuring the content is optimized
+                for social media, websites, and digital marketing.
               </li>
-              <li class="style-50">
-                Visual design of key pages including dashboards, login flows,
-                transaction views, and financial tools.
-              </li>
-              <li class="style-51">
-                Integration of user-centric features such as responsive layouts,
-                intuitive navigation, and accessibility standards.
-              </li>
-              <li class="style-52">
-                Delivery of complete design assets and a detailed UI guideline
-                document to support the development process.
+              <li class="style-49">
+                Post-Production Editing: Fine-tuning animations, color grading,
+                and rendering to achieve the highest level of polish and impact.
               </li>
             </ul>
-            <p class="style-53">‍</p>
-            <p class="style-54">
-              The end result is a secure, responsive, and visually cohesive
-              banking platform that strengthens ProfitPro’s reputation in the
-              financial industry.
-            </p>
-            <p class="style-55">‍</p>
+
           </div>
         </div>
       </div>
     </section>
-    <section class="style-56">
-      <div class="style-57">
-        <div class="style-58"></div>
+    <section class="style-52">
+      <div class="style-53">
+        <div class="style-54"></div>
+      </div>
+    </section>
+    <section class="image-grid-container">
+      <div class="image-grid">
+        <img
+          src="images/3D BLENDER/021527224471887.680b6a8de0ddf.jpg"
+          alt="Project shot 1"
+        />
+        <img
+          src="images/3D BLENDER/08cb79224471887.680b6a8de120d.jpg"
+          alt="Project shot 2"
+        />
+        <img
+          src="images/3D BLENDER/29a50d224471887.680b6a8c6a662.jpg"
+          alt="Project shot 3"
+        />
+        <img
+          src="images/3D BLENDER/435941224471887.680b6a8de096a.jpg"
+          alt="Project shot 4"
+        />
       </div>
     </section>
     <section class="section background-black">
