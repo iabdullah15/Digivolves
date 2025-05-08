@@ -1272,6 +1272,79 @@
           grid-template-columns: 1fr;
         }
       }
+
+      /* — Large desktops — keep your current two-column layout but reduce side padding */
+      @media (max-width: 1200px) {
+        .style-22 {
+          padding-left: 48px;
+          padding-right: 48px;
+        }
+        .style-23 {
+          padding-left: 48px;
+          padding-right: 48px;
+          gap: 32px;
+        }
+      }
+
+      /* — Tablets down to ~992px — collapse to single column */
+      @media (max-width: 992px) {
+        .style-23 {
+          grid-template-columns: 1fr;
+          padding-left: 24px;
+          padding-right: 24px;
+          gap: 24px;
+        }
+        /* center the content block if you like */
+        .style-24 {
+          align-items: center;
+          text-align: center;
+        }
+      }
+
+      /* — Small tablets & large phones (~768px) — scale down typography */
+      @media (max-width: 768px) {
+        .style-25 {
+          /* h5 */
+          font-size: 14px;
+          line-height: 22px;
+        }
+        .style-26 {
+          /* h3 */
+          font-size: 36px;
+          line-height: 42px;
+        }
+        .style-27 {
+          /* paragraph */
+          font-size: 16px;
+          line-height: 28px;
+          max-width: 100%;
+        }
+      }
+
+      /* — Phones (~480px) — tighten margins & font a bit more */
+      @media (max-width: 480px) {
+        .style-22 {
+          padding-left: 16px;
+          padding-right: 16px;
+        }
+        .style-23 {
+          padding-left: 16px;
+          padding-right: 16px;
+          gap: 16px;
+        }
+        .style-25 {
+          font-size: 12px;
+          letter-spacing: 1px;
+        }
+        .style-26 {
+          font-size: 28px;
+          line-height: 32px;
+        }
+        .style-27 {
+          font-size: 14px;
+          line-height: 24px;
+        }
+      }
     </style>
     <meta property="twitter:image" content="images/digivolves-logo.png" />
     <meta property="og:type" content="website" />
